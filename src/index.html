@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+  title: 'Mono | test task',
+  css: [
+    'css/page-index.css'
+  ],
+  js: [
+    'js/page-index.js'
+  ]
+})
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      @include('partials/hero.html')
+      @include('partials/cards.html')
+    </main>
+  </div>
+</body>
+
+</html>

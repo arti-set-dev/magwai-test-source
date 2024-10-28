@@ -1,0 +1,12 @@
+.logo {
+    @include bg-contain;
+
+    flex-shrink: 0;
+    width: 156px;
+    height: 60px;
+
+    @include mobile {
+        width: 112px;
+        height: 38px;
+    }
+}

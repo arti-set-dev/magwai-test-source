@@ -1,0 +1,60 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &__image {
+        vertical-align: bottom;
+        width: 100%;
+    }
+
+    &__content {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        padding: 25px 23px 30px;
+        background-color: var(--third-bg-color);
+    }
+
+    &__tag {
+        width: fit-content;
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 186%;
+        letter-spacing: 0.11em;
+        text-transform: uppercase;
+        color: #171717;
+    }
+
+    &__title {
+        display: inline-block;
+        margin: 0;
+        margin-bottom: 20px;
+        min-height: 51px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 162%;
+        color: #171717;
+    }
+
+    &__text {
+        margin: 0;
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 171%;
+        color: #666;
+
+        @include cropping(6);
+    }
+
+    &__autor {
+        margin-top: auto;
+        margin-bottom: 25px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 200%;
+        color: #666;
+    }
+}

@@ -1,0 +1,16 @@
+:root {
+  // base
+  --font-family: "Montserrat", sans-serif;
+  --second-family: "Mulish", sans-serif;
+  --third-family: "Montserrat SemiBold", sans-serif;
+  --content-width: 1720px;
+  --container-offset: 40px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --ui-transition: 0.3s;
+
+  // colors
+  --accent-bg-color: #131313;
+  --second-bg-color: #c2ab81;
+  --third-bg-color: #fff;
+  --accent-text-color: #fff;
+}

@@ -1,0 +1,110 @@
+.hero {
+    position: relative;
+    margin-top: 116px;
+    border-radius: 45px 45px 0 0;
+    height: calc(100vh - 116px);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: transform 0.8s ease 0.4s, opacity 0.8s ease 0.4s;
+
+    @include bg-cover;
+
+    &.anim-item--show {
+        opacity: 1;
+        transform: initial;
+    }
+
+    @include mobile {
+        margin-top: 68px;
+        border-radius: 25px 25px 0 0;
+        height: calc(100svh - 68px);
+    }
+
+    &::before {
+        @include pseudo;
+
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, #131313 0%, #13131300 100%);
+    }
+
+    &__container {
+        display: flex;
+        height: 100%;
+    }
+
+    &__content {
+        z-index: 5;
+        margin-top: auto;
+        padding: 96px 0;
+        max-width: 686px;
+
+        @include small-tablet {
+            max-width: 510px;
+        }
+
+        @include tablet {
+            padding: 76px 0;
+        }
+
+        @include mobile {
+            padding: 52px 0;
+            max-width: 380px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: transform 0.5s ease 0.6s, opacity 0.5s ease 0.6s;
+
+        &.anim-item--show {
+            opacity: 1;
+            transform: initial;
+        }
+
+        @include small-tablet {
+            font-size: 38px;
+        }
+
+        @include mobile {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+    }
+
+    &__desc {
+        margin-bottom: 40px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: transform 0.5s ease 0.8s, opacity 0.5s ease 0.8s;
+
+        &.anim-item--show {
+            opacity: 1;
+            transform: initial;
+        }
+
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+
+    &__btn-accent {
+        opacity: 0;
+        transform: translateY(20px) skew(-20deg);
+        transition: transform 0.5s ease 1s, opacity 0.5s ease 1s;
+
+        &.anim-item--show {
+            opacity: 1;
+            transform: translateY(0) skew(-20deg);
+        }
+
+        @include mobile {
+            padding: 14px;
+            max-width: 219px;
+        }
+    }
+}

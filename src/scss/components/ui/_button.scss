@@ -1,0 +1,78 @@
+.btn {
+    transform: skew(-20deg);
+
+    &[disabled] {
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+}
+
+.btn-outline {
+    border: 1px solid var(--accent-text-color);
+    padding: 11px 30px;
+    text-align: center;
+    opacity: 0.5;
+    transition: opacity var(--ui-transition) ease;
+
+    @include hover {
+        opacity: 1;
+    }
+
+    svg {
+        width: 32px;
+        height: 32px;
+        fill: var(--accent-text-color);
+        transform: skew(20deg);
+    }
+}
+
+.btn-accent {
+    position: relative;
+    padding: 21px;
+    width: 100%;
+    max-width: 282px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: var(--accent-text-color);
+    background-color: var(--second-bg-color);
+
+    &::after {
+        @include pseudo;
+
+        position: absolute;
+        right: -9px;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background-color: var(--accent-text-color);
+        transform: skew(0);
+    }
+
+    span {
+        display: inline-block;
+        transform: skew(20deg);
+    }
+}
+
+.burger {
+    @include bg-contain;
+
+    flex-shrink: 0;
+    width: 37px;
+    height: 31px;
+    background-image: url('../img/svg/burger.svg');
+}
+
+.btn-second {
+    display: block;
+    padding: 16px;
+    width: 100%;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    color: var(--accent-text-color);
+    background-color: #171717;
+}
